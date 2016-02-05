@@ -16,7 +16,8 @@ Forked from <https://github.com/mirkonasato/jodconverter>
 
 # License
 
-Copyright [Xcoo, Inc.][xcoo.jp] and other contributors.
+Copyright 2016 [Xcoo, Inc.][xcoo.jp] and other contributors.
+
 Copyright 2004-2012 Mirko Nasato and contributors.
 
 Licensed under the [Apache License, Version 2.0][apache-license-2.0].
