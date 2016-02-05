@@ -9,11 +9,11 @@
   <version>3.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>JODConverter - Core Library</name>
+  <name>JODConverter</name>
   <description>
-    JODConverter converts office documents using OpenOffice.org
+    JODConverter automates conversions between office document formats using LibreOffice or Apache OpenOffice
   </description>
-  <url>http://jodconverter.googlecode.com</url>
+  <url>https://github.com/withletters/jodconverter</url>
   <licenses>
     <license>
       <name>GNU Lesser General Public License, Version 3 or later</name>
@@ -83,13 +83,6 @@
       <groupId>commons-cli</groupId>
       <artifactId>commons-cli</artifactId>
       <version>1.1</version>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <!-- for more robust process management -->
-      <groupId>org.hyperic</groupId>
-      <artifactId>sigar</artifactId>
-      <version>1.6.5.132</version>
       <optional>true</optional>
     </dependency>
     <dependency>

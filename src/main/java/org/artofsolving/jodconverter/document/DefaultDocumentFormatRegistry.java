@@ -31,13 +31,6 @@ public class DefaultDocumentFormatRegistry extends SimpleDocumentFormatRegistry 
 		swf.setStoreProperties(DocumentFamily.DRAWING, Collections.singletonMap("FilterName", "draw_flash_Export"));
 		addFormat(swf);
 		
-		// disabled because it's not always available
-		//DocumentFormat xhtml = new DocumentFormat("XHTML", "xhtml", "application/xhtml+xml");
-		//xhtml.setStoreProperties(DocumentFamily.TEXT, Collections.singletonMap("FilterName", "XHTML Writer File"));
-		//xhtml.setStoreProperties(DocumentFamily.SPREADSHEET, Collections.singletonMap("FilterName", "XHTML Calc File"));
-		//xhtml.setStoreProperties(DocumentFamily.PRESENTATION, Collections.singletonMap("FilterName", "XHTML Impress File"));
-		//addFormat(xhtml);
-
 		DocumentFormat html = new DocumentFormat("HTML", "html", "text/html");
         // HTML is treated as Text when supplied as input, but as an output it is also
         // available for exporting Spreadsheet and Presentation formats
@@ -51,11 +44,6 @@ public class DefaultDocumentFormatRegistry extends SimpleDocumentFormatRegistry 
 		odt.setInputFamily(DocumentFamily.TEXT);
 		odt.setStoreProperties(DocumentFamily.TEXT, Collections.singletonMap("FilterName", "writer8"));
 		addFormat(odt);
-
-		DocumentFormat sxw = new DocumentFormat("OpenOffice.org 1.0 Text Document", "sxw", "application/vnd.sun.xml.writer");
-		sxw.setInputFamily(DocumentFamily.TEXT);
-		sxw.setStoreProperties(DocumentFamily.TEXT, Collections.singletonMap("FilterName", "StarOffice XML (Writer)"));
-		addFormat(sxw);
 
 		DocumentFormat doc = new DocumentFormat("Microsoft Word", "doc", "application/msword");
 		doc.setInputFamily(DocumentFamily.TEXT);
@@ -84,19 +72,10 @@ public class DefaultDocumentFormatRegistry extends SimpleDocumentFormatRegistry 
 		txt.setStoreProperties(DocumentFamily.TEXT, txtLoadAndStoreProperties);
 		addFormat(txt);
 
-        DocumentFormat wikitext = new DocumentFormat("MediaWiki wikitext", "wiki", "text/x-wiki");
-        wikitext.setStoreProperties(DocumentFamily.TEXT, Collections.singletonMap("FilterName", "MediaWiki"));
-        //addFormat(wikitext);
-		
 		DocumentFormat ods = new DocumentFormat("OpenDocument Spreadsheet", "ods", "application/vnd.oasis.opendocument.spreadsheet");
 		ods.setInputFamily(DocumentFamily.SPREADSHEET);
 		ods.setStoreProperties(DocumentFamily.SPREADSHEET, Collections.singletonMap("FilterName", "calc8"));
 		addFormat(ods);
-
-		DocumentFormat sxc = new DocumentFormat("OpenOffice.org 1.0 Spreadsheet", "sxc", "application/vnd.sun.xml.calc");
-		sxc.setInputFamily(DocumentFamily.SPREADSHEET);
-		sxc.setStoreProperties(DocumentFamily.SPREADSHEET, Collections.singletonMap("FilterName", "StarOffice XML (Calc)"));
-		addFormat(sxc);
 
 		DocumentFormat xls = new DocumentFormat("Microsoft Excel", "xls", "application/vnd.ms-excel");
 		xls.setInputFamily(DocumentFamily.SPREADSHEET);
@@ -130,11 +109,6 @@ public class DefaultDocumentFormatRegistry extends SimpleDocumentFormatRegistry 
 		odp.setStoreProperties(DocumentFamily.PRESENTATION, Collections.singletonMap("FilterName", "impress8"));
 		addFormat(odp);
 
-		DocumentFormat sxi = new DocumentFormat("OpenOffice.org 1.0 Presentation", "sxi", "application/vnd.sun.xml.impress");
-		sxi.setInputFamily(DocumentFamily.PRESENTATION);
-		sxi.setStoreProperties(DocumentFamily.PRESENTATION, Collections.singletonMap("FilterName", "StarOffice XML (Impress)"));
-		addFormat(sxi);
-
 		DocumentFormat ppt = new DocumentFormat("Microsoft PowerPoint", "ppt", "application/vnd.ms-powerpoint");
 		ppt.setInputFamily(DocumentFamily.PRESENTATION);
 		ppt.setStoreProperties(DocumentFamily.PRESENTATION, Collections.singletonMap("FilterName", "MS PowerPoint 97"));
@@ -148,10 +122,6 @@ public class DefaultDocumentFormatRegistry extends SimpleDocumentFormatRegistry 
         odg.setInputFamily(DocumentFamily.DRAWING);
         odg.setStoreProperties(DocumentFamily.DRAWING, Collections.singletonMap("FilterName", "draw8"));
         addFormat(odg);
-        
-        DocumentFormat svg = new DocumentFormat("Scalable Vector Graphics", "svg", "image/svg+xml");
-        svg.setStoreProperties(DocumentFamily.DRAWING, Collections.singletonMap("FilterName", "draw_svg_Export"));
-        addFormat(svg);
   	}
 
 }

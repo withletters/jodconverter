@@ -12,7 +12,7 @@
 //
 package org.artofsolving.jodconverter.process;
 
-public class PureJavaProcessManager implements ProcessManager {
+public class JavaProcessManager implements ProcessManager {
 
     public long findPid(ProcessQuery query) {
         return PID_UNKNOWN;

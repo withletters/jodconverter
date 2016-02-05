@@ -15,7 +15,7 @@ package org.artofsolving.jodconverter.office;
 import java.io.File;
 
 import org.artofsolving.jodconverter.process.ProcessManager;
-import org.artofsolving.jodconverter.process.PureJavaProcessManager;
+import org.artofsolving.jodconverter.process.JavaProcessManager;
 
 class ManagedOfficeProcessSettings {
 
@@ -26,7 +26,7 @@ class ManagedOfficeProcessSettings {
     private String[] runAsArgs;
     private File templateProfileDir;
     private File workDir = new File(System.getProperty("java.io.tmpdir"));
-    private ProcessManager processManager = new PureJavaProcessManager();
+    private ProcessManager processManager = new JavaProcessManager();
     private long retryTimeout = DefaultOfficeManagerConfiguration.DEFAULT_RETRY_TIMEOUT;
     private long retryInterval = DEFAULT_RETRY_INTERVAL;
 

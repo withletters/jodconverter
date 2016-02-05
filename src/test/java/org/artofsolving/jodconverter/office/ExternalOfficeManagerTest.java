@@ -17,7 +17,7 @@ import static org.testng.Assert.assertTrue;
 import java.io.File;
 
 import org.artofsolving.jodconverter.ReflectionUtils;
-import org.artofsolving.jodconverter.process.PureJavaProcessManager;
+import org.artofsolving.jodconverter.process.JavaProcessManager;
 import org.testng.annotations.Test;
 
 @Test(groups="integration")
@@ -26,7 +26,7 @@ public class ExternalOfficeManagerTest {
     public void executeTask() throws Exception {
         UnoUrl unoUrl = UnoUrl.socket(2002);
         OfficeProcess officeProcess = new OfficeProcess(OfficeUtils.getDefaultOfficeHome(), unoUrl,
-            null, null, new File(System.getProperty("java.io.tmpdir")), new PureJavaProcessManager());
+            null, null, new File(System.getProperty("java.io.tmpdir")), new JavaProcessManager());
         officeProcess.start();
         Thread.sleep(2000);
         Integer exitCode = officeProcess.getExitCode();
