@@ -1,18 +1,25 @@
 # JODConverter
 
-This is JODConverter 3.0 beta.
+JODConverter automates conversions between office document formats using LibreOffice or Apache OpenOffice.
 
-JODConverter automates conversions between office document formats
-using LibreOffice or Apache OpenOffice. 
+Forked from <https://github.com/mirkonasato/jodconverter>
 
-See http://jodconverter.googlecode.com for the latest documentation.
+# Usage
 
-# Licensing
+```
+<dependency>
+  <groupId>org.artofsolving.jodconverter</groupId>
+  <artifactId>jodconverter-core</artifactId>
+  <version>0.3.0-SNAPSHOT</version>
+</dependency>
+```
 
-JODConverter is open source software, you can redistribute it and/or
-modify it under either (at your option) of the following licenses
+# License
 
-1. The GNU Lesser General Public License v3 (or later)
-   -> see LICENSE-LGPL.txt
-2. The Apache License, Version 2.0
-   -> see LICENSE-Apache.txt
+Copyright [Xcoo, Inc.][xcoo.jp] and other contributors.
+Copyright 2004-2012 Mirko Nasato and contributors.
+
+Licensed under the [Apache License, Version 2.0][apache-license-2.0].
+
+[xcoo.jp]: https://xcoo.jp
+[apache-license-2.0]: http://www.apache.org/licenses/LICENSE-2.0.html
